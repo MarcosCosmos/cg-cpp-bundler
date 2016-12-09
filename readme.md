@@ -1,5 +1,6 @@
 #What Is This?
 This is a script for bundling small C++ projects into a single to upload to CodinGame by resolving includes, include guards, and accompanying .cpp files
+
 It's written in Python3, and only designed to cope
 #How Do I Use It?
 Usage is simple. Assuming you've got python3 installed correctly, just run the script (located at src/bundler.py in this repo) in python3, supplying a path to the source file containing your main method, and a path to the file you want the bundled code to be saved into as command line arguments.
@@ -7,6 +8,7 @@ I.e.:
     ```
         python3 bundler.py <main_file> <output_file>
     ```
+    
 E.g.:
     ```
         python3 bundler.py main.cpp bundled_code.cpp
@@ -23,7 +25,7 @@ This script is NOT a full C++ macro preprocessor. As such, there are some caveat
 - `#pragma once` macros are also removed (but will have been processed)
 - All other macros are not processed, and are included as-is (if block nesting is safely tracked, though) - This means that, for example, `#define MY_FILE`, or `#if defined MY_FILE` would not be noticed
 
-#What Does It Actually /Do/, Though?
+#What Does It Actually Do, Though?
 As a rough summary, it:
 - Processes local `#include`s (the ones using quotes, not angle-brackets)
 - Auto detects header-source pairs, including the implementation code at the end of the relevant header file in the bundle output
@@ -41,6 +43,7 @@ Additionally, I've included a collection of small C++ files I used to test the s
 
 #TODO
 This is a tentative to-do list of additional features I've considered, but have not yet implemented.
+
 It is not intended to be a complete list. For a more concrete idea of future plans, see the issues section.
 - Support for more complex/POSIX style command line arguments via parseargs
 - Code minificiation (with varying levels of intensity)
@@ -50,4 +53,5 @@ It is not intended to be a complete list. For a more concrete idea of future pla
 - Optionally performing some preprocessing optimisation within the script to squeeze out more performance (such as techniques described [here](https://www.codingame.com/forum/t/c-and-the-o3-compilation-flag/1670))
 
 I'll implement these on an as-needed basis for my own use, or possibly if there are community requests for them.
+
 Feel free to request additional features or report problems via the issues section of the repo. (or even implement changes yourself - pull-requests are welcome!)
