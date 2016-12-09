@@ -1,7 +1,6 @@
 #What Is This?
 This is a script for bundling small C++ projects into a single to upload to CodinGame by resolving includes, include guards, and accompanying .cpp files
 
-It's written in Python3, and only designed to cope
 #How Do I Use It?
 Usage is simple. Assuming you've got python3 installed correctly, just run the script (located at src/bundler.py in this repo) in python3, supplying a path to the source file containing your main method, and a path to the file you want the bundled code to be saved into as command line arguments.
 I.e.:
