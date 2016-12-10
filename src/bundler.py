@@ -253,7 +253,7 @@ oldWorkingDirectory = os.getcwd()
 lastDirSepPos = inputFilePath.rfind('/')
 if lastDirSepPos == -1:
     lastDirSepPos = inputFilePath.rfind('\\')
-if lastDirSepPos != 1:
+if lastDirSepPos != -1:
     inputPath, inputFileName = inputFilePath[0:lastDirSepPos], inputFilePath[lastDirSepPos+1:]
     os.chdir(inputPath)
 else:
