@@ -42,7 +42,7 @@ As a rough summary, it:
 - Processes local `#include`s (the ones using quotes, not angle-brackets)
 - Auto detects header-source (.h/.hpp - .c/.cpp) pairs, including the implementation code at the end of the relevant header file in the bundle output
 - Supports `#pragma once`
-- Processes include-guards and omits their contents when they are false. (but only those prefixed with `__INCLUDE_GUARD_`, at the moment)
+- Processes include-guards and omits their contents when they are false. (but only those prefixed with either `__INCLUDE_GUARD_`, or a user-supplied guard-prefix)
 - Auto-trims leading and trailing whitespace when taking from a file (thus omitting files whose contents are made empty by include guards entirely)
 - Can import targets within directory paths (in both parent and child directories)
 - Handles both `#ifdef` and `#ifndef` for include guards
