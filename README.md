@@ -62,7 +62,7 @@ They were the result of running `python3 src/bundler.py -i tests/in/main.cpp -o 
 This is a tentative to-do list of additional features I've considered, but have not yet implemented.
 
 It is not intended to be a complete list. For a more concrete idea of future plans, see the issues section.
-- Code minificiation (with varying levels of intensity)
+- Code minification (with varying levels of intensity)
 - CLI flags for including `#pragma` optimisation macros at the top of the bundled code 
 - Optionally performing some preprocessing optimisation within the script to squeeze out more performance (such as techniques described [here](https://www.codingame.com/forum/t/c-and-the-o3-compilation-flag/1670))
 
