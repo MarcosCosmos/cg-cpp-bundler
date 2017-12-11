@@ -16,9 +16,9 @@ E.g.:
 python3 bundler.py -i main.cpp -o bundled_code.cpp -g __INCLUDE_GUARD_
 ```
 
-If you omit the input argument, it will print the bundled code to standard output.
+If you omit the output argument, it will print the bundled code to standard output.
 
-If you omit the output, it will attempt to look for a `main.cpp` file in the current directory, and, if found, will use that as the input file.
+If you omit the input, it will attempt to look for a `main.cpp` file in the current directory, and, if found, will use that as the input file.
 
 If you omit the include guard, it defaults to `__INCLUDE_GUARD`.
 
