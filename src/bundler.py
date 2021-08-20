@@ -54,12 +54,16 @@ parser.add_argument(
 
 arguments = parser.parse_args()
 inputFilePaths = arguments.input or [DEFAULT_INPUT_FILEPATH]
+for i in range(len(inputFilePaths)):
+    inputFilePaths[i] = os.path.abspath(inputFilePaths[i])
 outputFilePath = arguments.output
 if arguments.no_guard:
     includeGuardPrefix = None
 else:
     includeGuardPrefix = arguments.guard_prefix or '__INCLUDE_GUARD_'
-includePath = arguments.path
+includePath = arguments.path or []
+for i in range(len(includePath)):
+    includePath[i] = os.path.abspath(includePath[i])
 alwaysOnce = arguments.always_once
 noSource = arguments.no_source
 # set some values, etc to use in the processing
